@@ -36,7 +36,7 @@ public class ChatBoxActivity extends AppCompatActivity {
 
     {
         try {
-            mSocket = IO.socket("http://10.0.112.194:8765");
+            mSocket = IO.socket("http://34.87.57.218:8765");
             mSocket.connect();
             Log.d("loglog", "instance initializer: "+mSocket.connected());
         } catch (URISyntaxException e) {
@@ -92,10 +92,8 @@ public class ChatBoxActivity extends AppCompatActivity {
         mSocket.on("message", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
-//                try {
-                    Log.d("loglog", "call: "+args[0].toString());
-//                    JSONObject messageJson = new JSONObject(args[0].toString());
-//                    message = messageJson.getString("message");
+
+                if (args[0].toString().contains("{")){
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -120,6 +118,12 @@ public class ChatBoxActivity extends AppCompatActivity {
                             }
                         }
                     });
+                }
+//                try {
+                    Log.d("loglog", "call: "+args[0].toString());
+//                    JSONObject messageJson = new JSONObject(args[0].toString());
+//                    message = messageJson.getString("message");
+
 //                } catch (JSONException e) {
 //                    e.printStackTrace();
 //                    Log.d("loglog", "call: "+e.getMessage());
