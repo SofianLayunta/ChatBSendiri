@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/llChat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:layout_marginHorizontal="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@id/nickname"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text="Nickname : "
+        android:textStyle="bold"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@id/message"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:text=" message "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round2"
+        android:padding="8dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
