@@ -1,22 +1,22 @@
 package com.example.chatbsendiri;
 
-public class Message {
+public class chatting {
 
     private String nickname;
     private String message ;
     private String room ;
 
 
-    public  Message(){
+    public chatting(){
 
     }
-    public Message(String nickname, String message, String room) {
+    public chatting(String nickname, String message, String room) {
         this.nickname = nickname;
         this.message = message;
         this.room = room;
     }
 
-    public Message( String message) {
+    public chatting(String message) {
         this.message = message;
     }
 
